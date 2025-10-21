@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
+
+</script>
 
 <template>
   <h1>You did it!</h1>
