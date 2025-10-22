@@ -1,6 +1,13 @@
 <script setup>
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
+  import axios from 'axios'
+  import { ref, onMounted } from 'vue'
 
+  const posts = ref([])
+
+  onMounted(async () => {
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/posts`)
+    posts.value = res.data
+  })
 </script>
 
 <template>
