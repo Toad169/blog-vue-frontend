@@ -1,6 +1,8 @@
 <script setup>
   import { ref, onMounted } from 'vue'
-  import api from '@/api/axios'
+  import api from '@/js/axios'
+
+  import './main.css'
 
   const posts = ref([])
 
